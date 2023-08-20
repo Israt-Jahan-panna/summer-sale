@@ -54,27 +54,39 @@
             </div>
           </div>
     </header>
-    <main>
+    <main class="container mx-auto">
         <div class="hero min-h-screen bg-base-200">
             <div class="hero-content flex-col lg:flex-row-reverse">
                  <!-- purchase side -->
                     <div class="flex-col">
-                        <div class="card bg-base-100 shadow-xl">
-                            <div class="card-body">
-                              <h2 class="card-title">Card title!</h2>
-                              <p>If a dog chews shoes whose shoes does he choose?</p>
-                              <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                      <!-- coupon section  -->
+                            <div class="py-6 px-6 bg-base-100 mb-6 rounded-lg">
+                              <h2 class="card-title text-2xl text-[#111111] font-medium">Have coupon?!</h2>
+                                <div class="">
+                                  <div class="flex items-center  border-gray-200 pb-2 mb-4">
+                                    <input
+                                      type="text"
+                                      class="flex-1 py-2 px-3 border border-gray-300 rounded-l-md focus:outline-none focus:border-white"
+                                      placeholder="Coupon code"
+                                    />
+                                    <button class="py-2 px-4 bg-[#E527B2] text-xl font-semibold text-white rounded-r-md hover:bg-[#E527B2] focus:outline-none">
+                                      Apply
+                                    </button>
+                                  </div>
                               </div>
-                            </div>
                           </div>
                         <div class="card bg-base-100 shadow-xl">
                             <div class="card-body">
-                              <h2 class="card-title">Card title!</h2>
-                              <p>If a dog chews shoes whose shoes does he choose?</p>
-                              <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
-                              </div>
+                              <ul>
+                                <li>Option1</li>
+                                <li>Option2</li>
+                                <li>Option3</li>
+                              </ul>
+                              <h1>Total Price:</h1>
+                              <h1>Discount Price:</h1>
+                              <h1>Total:</h1>
+                              <hr class="mt-10" >
+                              <button class="bg-[#E527B2] rounded-lg mt-10 -mb-16 text-white text-xl font-semibold py-4 px-20 ">Purchase</button>
                             </div>
                           </div>
                     </div>
