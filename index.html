@@ -24,6 +24,9 @@
         font-family: "Work Sans", sans-serif;
       }
     </style>
+
+    <!-- icon font awesome -->
+    <script src="https://kit.fontawesome.com/04df999d00.js" crossorigin="anonymous"></script>
     <!-- custom components -->
 <script>
     tailwind.config = {
@@ -55,7 +58,7 @@
           </div>
     </header>
     <main class="container mx-auto">
-        <div class="hero min-h-screen bg-base-200">
+        <div class="hero min-h-screen bg-base-200 lg:px-30">
             <div class="hero-content flex-col lg:flex-row-reverse">
                  <!-- purchase side -->
                     <div class="flex-col">
@@ -64,115 +67,153 @@
                               <h2 class="card-title text-2xl text-[#111111] font-medium">Have coupon?!</h2>
                                 <div class="">
                                   <div class="flex items-center  border-gray-200 pb-2 mb-4">
-                                    <input
+                                    <input id="coupon-apply"
                                       type="text"
                                       class="flex-1 py-2 px-3 border border-gray-300 rounded-l-md focus:outline-none focus:border-white"
                                       placeholder="Coupon code"
                                     />
-                                    <button class="py-2 px-4 bg-[#E527B2] text-xl font-semibold text-white rounded-r-md hover:bg-[#E527B2] focus:outline-none">
+                                    <button id="apply-btn" class="py-2 px-4 bg-[#E527B2] text-xl font-semibold text-white rounded-r-md hover:bg-[#E527B2] focus:outline-none " disabled>
                                       Apply
                                     </button>
                                   </div>
                               </div>
                           </div>
                         <div class="card bg-base-100 shadow-xl">
-                            <div class="card-body">
+                            <div class="card-body font-medium text-2xl">
                               <ul>
                                 <li>Option1</li>
                                 <li>Option2</li>
                                 <li>Option3</li>
                               </ul>
-                              <h1>Total Price:</h1>
-                              <h1>Discount Price:</h1>
-                              <h1>Total:</h1>
+                              <h1>Total Price: 00 </h1>
+                              <h1>Discount Price: 00 </h1>
+                              <h1>Total: 00 </h1>
                               <hr class="mt-10" >
-                              <button class="bg-[#E527B2] rounded-lg mt-10 -mb-16 text-white text-xl font-semibold py-4 px-20 ">Purchase</button>
+                              <button class="bg-[#E527B2] rounded-lg mt-10 -mb-16 text-white text-xl font-semibold py-4 px-20 " id="purchase-btn" disabled >Purchase</button>
                             </div>
                           </div>
                     </div>
               <div class="card">
                 <h1 class="font-semibold text-4xl text-[#111111] mt-14 mb-10">Kitchenware</h1>
-              <div class=" grid grid-cols-3 gap-6">
+              <div class=" grid md:grid-cols-3 lg:grid-cols-3  gap-6">
                   <!-- card-1 -->
-                  <div class="card bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                  <div class="card bg-base-100 shadow-xl ">
+                    <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-20 m-5 ">
+                    <figure class="">
+                        <img src="./images/prod1.png" alt="Shoes" class="" />
                     </figure>
+                  </div>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                      <h2 class="card-title">
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                      </h2>
+                      <p class="font-semibold text-xl text-[#111111]">K. Accessories</p>
+                      <p class="text-xl text-slate-400">39.00 TK</p>
                     </div>
                   </div>
                   <!-- card-2 -->
-                  <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                  <div class="card bg-base-100 shadow-xl ">
+                    <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
+                    <figure class="">
+                        <img src="./images/prod2.png" alt="Shoes" class=" " />
                     </figure>
+                  </div>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                      <h2 class="card-title">
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                      </h2>
+                      <p class="font-semibold text-xl text-[#111111]">K. Accessories</p>
+                      <p class="text-xl text-slate-400">25.00 TK</p>
                     </div>
                   </div>
                   <!-- card-3 -->
-                  <div class="card bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                  <div class="card bg-base-100 shadow-xl ">
+                    <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
+                    <figure class="">
+                        <img src="./images/prod3.png" alt="Shoes" class=" " />
                     </figure>
+                  </div>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                      <h2 class="card-title">
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                      </h2>
+                      <p class="font-semibold text-xl text-[#111111]">Home Cooker</p>
+                      <p class="text-xl text-slate-400">49.00 TK</p>
                     </div>
                   </div>
               </div>
               <h1 class="font-semibold text-4xl text-[#111111] mt-14 mb-10">Sportswear</h1>
-                <div class="grid grid-cols-3 gap-6">
+                <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
                       <!-- card-4 -->
-                  <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <div class="card bg-base-100 shadow-xl ">
+                        <div class="rounded-lg  bg-[#0B0B0B05] py-12 px-16 m-5 ">
+                        <figure class="">
+                            <img src="./images/prod4.png" alt="Shoes" class=" " />
+                        </figure>
                       </div>
-                    </div>
-                  </div>
+                        <div class="card-body items-center text-center">
+                          <h2 class="card-title">
+                            <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                            <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                            <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                            <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                            <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                          </h2>
+                          <p class="font-semibold text-xl text-[#111111]">Sports Back Cap</p>
+                          <p class="text-xl text-slate-400">49.00 TK</p>
+                        </div>
+                      </div>
                   <!-- card-5 -->
-                  <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                  <div class="card bg-base-100 shadow-xl ">
+                    <div class="rounded-lg  bg-[#0B0B0B05] py-4 px-10 m-5 ">
+                    <figure class="">
+                        <img src="./images/prod5.png" alt="Shoes" class=" " />
                     </figure>
+                  </div>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                      <h2 class="card-title">
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                      </h2>
+                      <p class="font-semibold text-xl text-[#111111]">Full Jersey Set</p>
+                      <p class="text-xl text-slate-400">59.00 TK</p>
                     </div>
                   </div>
                   <!-- card-6 -->
-                  <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                  <div class="card bg-base-100 shadow-xl ">
+                    <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
+                    <figure class="">
+                        <img src="./images/prod6.png" alt="Shoes" class=" " />
                     </figure>
+                  </div>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                      <h2 class="card-title">
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
+                      </h2>
+                      <p class="font-semibold text-xl text-[#111111]">Sports cates</p>
+                      <p class="text-xl text-slate-400">159.00 TK</p>
                     </div>
+                  </div>
+            
                   </div>
                 </div>
               </div>
@@ -182,5 +223,6 @@
             </div>
           </div>
     </main>
+    <script src="/js/button.js"></script>
   </body>
 </html>
