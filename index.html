@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
-    <!-- daisyui and tailwind cdn link -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <!-- daisy's and tailwind cdn link --> 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- font work sons  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,8 +31,7 @@
         extend: {
           colors: {
             clifford: '#da373d',
-            'color-of-text': '#111111',
-            'color-pink': '#E527B2',
+            
           }
         }
       }
@@ -80,11 +76,11 @@
                           </div>
                         <div class="card bg-base-100 shadow-xl">
                             <div class="card-body font-medium text-2xl">
-                              <ul>
-                                <li>Option1</li>
-                                <li>Option2</li>
-                                <li>Option3</li>
-                              </ul>
+                             <div class="selectedItems" id="selectedItems">
+                              <ol>
+                                <li></li>
+                              </ol>
+                             </div>
                               <h1>Total Price: 00 </h1>
                               <h1>Discount Price: 00 </h1>
                               <h1>Total: 00 </h1>
@@ -97,7 +93,7 @@
                 <h1 class="font-semibold text-4xl text-[#111111] mt-14 mb-10">Kitchenware</h1>
               <div class=" grid md:grid-cols-3 lg:grid-cols-3  gap-6">
                   <!-- card-1 -->
-                  <div class="card bg-base-100 shadow-xl ">
+                  <div onclick="handelClickBtn(this)" class="card bg-base-100  ">
                     <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-20 m-5 ">
                     <figure class="">
                         <img src="./images/prod1.png" alt="Shoes" class="" />
@@ -113,10 +109,11 @@
                       </h2>
                       <p class="font-semibold text-xl text-[#111111]">K. Accessories</p>
                       <p class="text-xl text-slate-400">39.00 TK</p>
+                      <button onclick="handelClickBtn">buy</button>
                     </div>
                   </div>
                   <!-- card-2 -->
-                  <div class="card bg-base-100 shadow-xl ">
+                  <div onclick="handelClickBtn(this)"  class="card bg-base-100  ">
                     <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
                     <figure class="">
                         <img src="./images/prod2.png" alt="Shoes" class=" " />
@@ -135,7 +132,7 @@
                     </div>
                   </div>
                   <!-- card-3 -->
-                  <div class="card bg-base-100 shadow-xl ">
+                  <div onclick="handelClickBtn(this)"  class="card bg-base-100 ">
                     <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
                     <figure class="">
                         <img src="./images/prod3.png" alt="Shoes" class=" " />
@@ -157,7 +154,7 @@
               <h1 class="font-semibold text-4xl text-[#111111] mt-14 mb-10">Sportswear</h1>
                 <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
                       <!-- card-4 -->
-                      <div class="card bg-base-100 shadow-xl ">
+                      <div onclick="handelClickBtn(this)"  class="card bg-base-100  ">
                         <div class="rounded-lg  bg-[#0B0B0B05] py-12 px-16 m-5 ">
                         <figure class="">
                             <img src="./images/prod4.png" alt="Shoes" class=" " />
@@ -176,7 +173,7 @@
                         </div>
                       </div>
                   <!-- card-5 -->
-                  <div class="card bg-base-100 shadow-xl ">
+                  <div onclick="handelClickBtn(this)" class="card bg-base-100 ">
                     <div class="rounded-lg  bg-[#0B0B0B05] py-4 px-10 m-5 ">
                     <figure class="">
                         <img src="./images/prod5.png" alt="Shoes" class=" " />
@@ -195,7 +192,7 @@
                     </div>
                   </div>
                   <!-- card-6 -->
-                  <div class="card bg-base-100 shadow-xl ">
+                  <div onclick="handelClickBtn(this)"  class="card bg-base-100  ">
                     <div class="rounded-lg  bg-[#0B0B0B05] py-8 px-16 m-5 ">
                     <figure class="">
                         <img src="./images/prod6.png" alt="Shoes" class=" " />
@@ -206,7 +203,7 @@
                         <i class="fa-solid fa-star" style="color: #eb840f;"></i>
                         <i class="fa-solid fa-star" style="color: #eb840f;"></i>
                         <i class="fa-solid fa-star" style="color: #eb840f;"></i>
-                        <i class="fa-solid fa-star" style="color: #eb840f;"></i>
+                        <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
                         <i class="fa-regular fa-star" style="color: #eb840f;"></i> 
                       </h2>
                       <p class="font-semibold text-xl text-[#111111]">Sports cates</p>
@@ -217,12 +214,9 @@
                   </div>
                 </div>
               </div>
-              <div>
-                
-              </div>
             </div>
           </div>
     </main>
-    <script src="/js/button.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
