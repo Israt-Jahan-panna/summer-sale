@@ -3,9 +3,10 @@ let discount = 0;
 
 function handelClickBtn(target) {
     const selectedItemsContainer = document.getElementById('selectedItems');
+    const count = selectedItemsContainer.childElementCount;
     const itemName = target.querySelector('.card-body p').innerText; 
     const li = document.createElement('li');
-    li.innerText = itemName;
+    li.innerText = `${count}. ${itemName}`;
     selectedItemsContainer.appendChild(li);
     
     const price = target.querySelector('.card-body h4').innerText.split(" ") [0] ;
@@ -15,7 +16,7 @@ function handelClickBtn(target) {
 
     if (total >= 200 ) {
       applyButton.removeAttribute('disabled');
-      // applyButton.addEventListener('click', applyCoupon);
+      
     } else {
       applyButton.setAttribute('disabled', true);
       applyButton.removeEventListener('click', applyCoupon);
