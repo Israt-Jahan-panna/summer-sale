@@ -11,28 +11,56 @@ function handelClickBtn(target) {
     const price = target.querySelector('.card-body h4').innerText.split(" ") [0] ;
     total = parseInt(total) + parseInt(price );
     const totalPrice = document.getElementById('totalPrice').innerText = total;
-    if (totalPrice >= 200){
-      discount = 0.20 * totalPrice;
-      const discountAmount = document.getElementById('discount').innerText = discount;
+    document.getElementById('totalPrice').innerText = total;
+
+    if (total >= 200) {
+      applyButton.removeAttribute('disabled');
+      applyButton.addEventListener('click', applyCoupon);
+    } else {
+      applyButton.setAttribute('disabled', true);
+      applyButton.removeEventListener('click', applyCoupon);
     }
-    else {
-      discount = 0;
-      document.getElementById('discount').innerText = discount.toFixed(2);
+
+    updateFinalPrice();
+
+    if (total > 0) {
+      purchaseButton.removeAttribute('disabled');
+    } else {
+      purchaseButton.setAttribute('disabled', true);
     }
-    const finalPrice = total - discount;
-    document.getElementById('finalPrice').innerText = finalPrice.toFixed(2);
-    document.getElementById('purchase-btn').addEventListener('keyup', function(event) {
-      const text = event.target.value;
-      const purchaseButton = document.getElementById('purchase-btn');
-      
-      if (total >= 1) {
-        purchaseButton.removeAttribute('disabled');
-      } else {
-        purchaseButton.setAttribute('disabled', true);
-      }
-      
-    });
   }
+  const applyCouponInput = document.getElementById('apply-coupon');
+  const applyButton = document.getElementById('apply-btn');
+  const purchaseButton = document.getElementById('purchase-btn');
+
+  purchaseButton.addEventListener('keyup', function(event) {
+    const text = event.target.value;
+
+    if (total >= 1) {
+      purchaseButton.removeAttribute('disabled');
+    } else {
+      purchaseButton.setAttribute('disabled', true);
+    }
+  });
+
+  applyCouponInput.addEventListener('keyup', function(event) {
+    const text = event.target.value;
+    if (total >= 200 && text === 'SELL200') {
+      applyButton.removeAttribute('disabled');
+    } else {
+      applyButton.setAttribute('disabled', true);
+    }
+  });
   
- 
+    function applyCoupon() {
+      discount = 0.20 * total;
+      document.getElementById('discount').innerText = discount;
+      updateFinalPrice();
+    }
+
+    function updateFinalPrice() {
+      const finalPrice = total - discount;
+      document.getElementById('finalPrice').innerText = finalPrice;
+    }
+
   
