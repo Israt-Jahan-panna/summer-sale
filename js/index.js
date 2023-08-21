@@ -13,9 +13,9 @@ function handelClickBtn(target) {
     const totalPrice = document.getElementById('totalPrice').innerText = total;
     document.getElementById('totalPrice').innerText = total.toFixed(2);
 
-    if (total >= 200) {
+    if (total >= 200 ) {
       applyButton.removeAttribute('disabled');
-      applyButton.addEventListener('click', applyCoupon);
+      // applyButton.addEventListener('click', applyCoupon);
     } else {
       applyButton.setAttribute('disabled', true);
       applyButton.removeEventListener('click', applyCoupon);
@@ -47,6 +47,7 @@ function handelClickBtn(target) {
     const text = event.target.value;
     if (total >= 200 && text === 'SELL200') {
       applyButton.removeAttribute('disabled');
+      applyButton.addEventListener('click', applyCoupon);
     } else {
       applyButton.setAttribute('disabled', true);
     }
