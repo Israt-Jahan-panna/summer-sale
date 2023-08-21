@@ -5,6 +5,8 @@ function handelClickBtn(target) {
     const li = document.createElement('li');
     li.innerText = itemName;
     selectedItemsContainer.appendChild(li);
+    console.log (target.querySelector('.card-body h4').innerText.split(" ") [0] );
+    
   }
  
   
