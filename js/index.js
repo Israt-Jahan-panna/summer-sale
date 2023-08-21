@@ -63,4 +63,7 @@ function handelClickBtn(target) {
       document.getElementById('finalPrice').innerText = finalPrice;
     }
 
-  
+    const goBackButton = document.getElementById('goHomeBtn');
+    goBackButton.addEventListener('click', function() {
+      window.location.href = 'http://127.0.0.1:5500/index.html'; // Replace with your homepage URL
+    });
