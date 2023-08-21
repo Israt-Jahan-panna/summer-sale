@@ -77,16 +77,32 @@
                         <div class="card bg-base-100 shadow-xl">
                             <div class="card-body font-medium text-2xl">
                              <div class="selectedItems" id="selectedItems">
-                              <ol>
-                                <li></li>
-                              </ol>
+                              <ul>
+                              </ul>
                              </div>
+                             <hr>
                               <h1>Total Price: <span id="totalPrice">00</span> </h1>
                               <h1>Discount Price: <span id="discount">00</span></h1>
                               <h1>Total: <span id="finalPrice">00</span></h1>
                               <hr class="mt-10" >
-                              <button class="bg-[#E527B2] rounded-lg mt-10 -mb-16 text-white text-xl font-semibold py-4 px-20 " id="purchase-btn"  disabled >Purchase</button>
-                              
+                             <!-- Open the modal using ID.showModal() method -->
+                               <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                      <div class="card bg-base-100">
+                                        <figure class="px-10 pt-10">
+                                          <img src="./images/congo.png" alt="Shoes" class="rounded-xl" />
+                                        </figure>
+                                        <div class="card-body items-center text-center">
+                                          <h2 class="card-title">Congratulations</h2>
+                                          <p>Your Purchase the product</p>
+                                          <div class="card-actions">
+                                            <button class="bg-[#E527B2] rounded-lg mt-10 mb-16 text-white text-xl font-semibold py-4 px-16">Go Home</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </form>
+                                </dialog>
+                              <button  class="bg-[#E527B2] rounded-lg mt-10 -mb-16 text-white text-xl font-semibold py-4 px-20 " onclick="my_modal_5.showModal()" id="purchase-btn"   disabled >Purchase</button>
                             </div>
                           </div>
                     </div>
